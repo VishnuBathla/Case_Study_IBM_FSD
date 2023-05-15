@@ -1,0 +1,38 @@
+
+#h11{
+    padding-left: 10px;
+    margin: 0;
+    margin-top: 1%;
+    font-size: 2.4rem;
+    float:left;
+}
+#burger{
+    display: none;
+}
+.buttons{
+    float: right;
+}
+.Header{
+    background-color: aqua;
+    width: 100%;
+    height: 100px;
+}
+.buttonsheader{
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    font-size: large;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-top: 20px;
+}
+
+@media screen and (max-width:700px) {
+    .buttonsheader{
+        display: none;
+    }
+    #burger{
+        display: block;
+    }
+}

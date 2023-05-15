@@ -1,0 +1,77 @@
+/* SignupPage.css */
+
+body {
+	background-color: #e6f2ff;
+	/* Set the background color of the entire page */
+}
+
+.signup-container {
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 150px;
+	/* Adjust the top margin to center the box vertically */
+	padding: 40px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-heading {
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 30px;
+	color: #333;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	display: block;
+	font-size: 14px;
+	margin-bottom: 5px;
+	color: #555;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.signup-button {
+	display: block;
+	width: 100%;
+	padding: 12px;
+	margin-top: 20px;
+	background-color: #0084ff;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.signup-button:hover {
+	background-color: #0065cc;
+}
+
+.signup-link {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.signup-link a {
+	color: #555;
+}
+
+.signup-link a:hover {
+	color: #333;
+}
+

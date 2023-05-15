@@ -1,0 +1,16 @@
+.courseselected{
+    background-color:yellow;
+    float: left;
+    width: 30%;
+    height: 500px;
+}
+.Details{
+    background-color: gray;
+    float: right;
+    width: 70%;
+    height: 500px;
+    
+}
+.paddingdetails{
+    padding-left: 20px;
+}
