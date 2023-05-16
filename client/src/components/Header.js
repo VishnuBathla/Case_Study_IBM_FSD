@@ -9,16 +9,16 @@ function Header() {
         <input type="button" value="My Course" className="buttonsheader" />
         <input
           type="image"
-          src="https://img.uxwing.com/wp-content/themes/uxwing/download/user-interface/search-icon.png"
-          height="30px"
-          width="30px"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/VisualEditor_-_Icon_-_Search-big_-_white.svg/1200px-VisualEditor_-_Icon_-_Search-big_-_white.svg.png"
+          height="50px"
+          width="50px"
           alt="search"
           className="buttonsheader"
           id="search"
         />
         <input
           type="image"
-          src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-bell-512.png"
+          src="https://flaticons.net/icon.php?slug_category=miscellaneous&slug_icon=bell"
           height="30px"
           width="30px"
           alt="bell"

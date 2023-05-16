@@ -13,11 +13,13 @@
     float: right;
 }
 .Header{
-    background-color: aqua;
+    background-color: #333;
+    color:white;
     width: 100%;
     height: 100px;
 }
 .buttonsheader{
+    color:white;
     text-decoration: none;
     background-color: transparent;
     padding: 10px;
