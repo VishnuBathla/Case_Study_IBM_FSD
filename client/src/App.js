@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CourseDetails from "./components/CourseDetails";
 import LandingPage from "./components/landingPage";
 import SignInPage from "./components/student/signInPage";
+import Profile from "./components/instructor_profile";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/courseDetails" element={<CourseDetails />} />
         <Route path="/studentSignup" element={<SignupPage />} />
         <Route path="/studentSignin" element={<SignInPage />} />
+        <Route path="/profile/:id" element={<Profile />} />
         {/* <Route path="/studentlogin" component={} /> */}
       </Routes>
     </Router>
