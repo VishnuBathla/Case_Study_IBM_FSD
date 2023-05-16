@@ -16,7 +16,7 @@ const Profile = ()=>{
         <Header/>
         <div style={{display:'flex'}}>
         <div style={{width:'30%',marginRight:'5%'}}>
-            <img src={current.imgUrl} style={{width:'70%',paddingTop:'100%',paddingLeft:'20%'}} alt="instructor"/>
+            <img src={current.imgUrl} style={{width:'70%',paddingTop:'40%',paddingLeft:'20%'}} alt="instructor"/>
         </div>
         <div style={{width:'60%',textAlignLast:'left',paddingTop:"10%"}}>
             <h1 style={{fontWeight:'bold',marginBottom:0}}>{current.Name}</h1>
