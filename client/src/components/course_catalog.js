@@ -1,3 +1,4 @@
+import Footer from "./Footer"
 import Header from "./Header"
 import CourseCard from "./coursecard"
 
@@ -92,6 +93,7 @@ const course_Catalog=()=>{
                 coursedata.map(course=><CourseCard data={course}/>)
             }
         </div>
+        <Footer/>
         </>
     )
 }
