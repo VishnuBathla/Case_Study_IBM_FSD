@@ -6,7 +6,7 @@ function Footer() {
       <footer className="">
         <div className="footdiv">
           <section className="foot">
-            <h2>Location</h2>
+            <h2>About</h2>
             <ul className="feet">
               <li>Bakery Pie Shop</li>
               <li>123 Bakery Street</li>
