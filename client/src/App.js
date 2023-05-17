@@ -5,7 +5,7 @@ import CourseDetails from "./components/CourseDetails";
 import LandingPage from "./components/landingPage";
 import SignInPage from "./components/student/signInPage";
 import Profile from "./components/instructor_profile";
-import Course_catalog from "./components/course_catalog";
+import CourseCatalog from "./components/course_catalog";
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/studentSignup" element={<SignupPage />} />
         <Route path="/studentSignin" element={<SignInPage />} />
         <Route path="/profile/:id" element={<Profile />} />
-        <Route path="/courses" element={<Course_catalog />} />
+        <Route path="/courses" element={<CourseCatalog />} />
 
         {/* <Route path="/studentlogin" component={} /> */}
       </Routes>
