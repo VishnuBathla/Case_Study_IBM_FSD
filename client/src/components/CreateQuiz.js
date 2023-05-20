@@ -3,10 +3,12 @@ import React, { useState } from 'react';
 //Bootstrap and jQuery libraries
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Adding antd modules and style
-import { Button, Modal, Form, Input } from 'antd';
+import { Modal, Form, Input } from 'antd';
 import 'antd/dist/reset.css';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
+
 class CreatQuiz extends React.Component {
-  
+
   render(){
    //popup and form code
     const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
@@ -15,13 +17,14 @@ class CreatQuiz extends React.Component {
           <Modal
             visible={visible}
             title="New Quiz"
-            okText="Save"
+            okText="Next"
             cancelText="Cancel"
             onCancel={onCancel}
             onOk={() => {
               form
                 .validateFields()
                 .then((values) => {
+                  console.log(values)
                   form.resetFields();
                   onCreate(values);
                 })
@@ -58,7 +61,7 @@ class CreatQuiz extends React.Component {
                 },
               ]}
               >
-                <Input  type='Number'/>
+                <Input  type='Number' min={0}/>
               </Form.Item>
               <Form.Item name="Time" label="Time-Limit(in mins)"
               rules={[
@@ -68,7 +71,7 @@ class CreatQuiz extends React.Component {
                 },
               ]}
               >
-                <Input  type='Number'/>
+                <Input  type='Number' min={0}/>
               </Form.Item>
               
             </Form>
@@ -85,15 +88,12 @@ class CreatQuiz extends React.Component {
         };
       
         return (
-          <div className='CreateQuiz'>
-            <Button
-              type="primary"
-              onClick={() => {
+          <>
+            <div onClick={() => {
                 setVisible(true);
-              }}
-            >
-              New Quiz
-            </Button>
+              }}><CheckBoxIcon />
+              Quiz
+              </div>
             <CollectionCreateForm
               visible={visible}
               onCreate={onCreate}
@@ -101,20 +101,12 @@ class CreatQuiz extends React.Component {
                 setVisible(false);
               }}
             />
-          </div>
+          </>
         );
       };
   return (
     <div className="MainDiv">
-      <div class="jumbotron text-center">
-          <h3>Create quiz</h3>
-         
-      </div>
-      
-      <div className="container">
-          
       <CollectionsPage />
-        </div>
       </div>
   );
 }

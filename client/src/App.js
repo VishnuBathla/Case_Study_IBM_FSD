@@ -7,7 +7,6 @@ import SignInPage from "./components/student/signInPage";
 import Profile from "./components/instructor_profile";
 import CourseCatalog from "./components/course_catalog";
 import SideBar from "./components/sidebar";
-
 const App = () => {
   return (
     <Router>
@@ -19,8 +18,6 @@ const App = () => {
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/courses" element={<CourseCatalog />} />
         <Route path="/main" element={<SideBar/>} />
-
-        {/* <Route path="/curriculum/:id" element={<CourseCurriculum />}/> */}
         {/* <Route path="/studentlogin" component={} /> */}
       </Routes>
     </Router>

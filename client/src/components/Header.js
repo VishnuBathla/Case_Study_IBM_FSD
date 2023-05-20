@@ -1,41 +1,18 @@
-import "./styles/Header.css";
+import SearchIcon from '@mui/icons-material/Search';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import { Link} from 'react-router-dom';
+const Header = ()=>{
+    return (
+        <header style={{display:'grid', height:'8vh',background:'black',color:'white'}}>
+            <Link to={'/'} style={{fontSize:'1.5rem',textAlign:'left',gridColumn:1,marginTop:'auto',color:'white',fontWeight:'bolder',textDecoration:'none'}} >LearnIt</Link>
+            <span style={{display:'flex',justifyContent:'end',gridColumn:2,marginTop:'auto'}}>
+            <span style={{marginRight:'2%'}} >Library</span>
+            <span style={{marginRight:'2%',gridColumn:1}}>My Course</span>
+            <SearchIcon style={{color:'white',marginRight:'2%',gridColumn:1}}/> 
+            <NotificationsIcon style={{color:'white',gridColumn:1}} />
+            </span>
 
-function Header() {
-  return (
-    <div className="Header">
-      <h1 id="h11">LearnIt</h1>
-      <form className="buttons">
-        <input type="button" value="Library" className="buttonsheader" />
-        <input type="button" value="My Course" className="buttonsheader" />
-        <input
-          type="image"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/VisualEditor_-_Icon_-_Search-big_-_white.svg/1200px-VisualEditor_-_Icon_-_Search-big_-_white.svg.png"
-          height="50px"
-          width="50px"
-          alt="search"
-          className="buttonsheader"
-          id="search"
-        />
-        <input
-          type="image"
-          src="https://flaticons.net/icon.php?slug_category=miscellaneous&slug_icon=bell"
-          height="30px"
-          width="30px"
-          alt="bell"
-          className="buttonsheader"
-          id="bell"
-        />
-        <input
-          type="image"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"
-          height="30px"
-          width="30px"
-          alt="burger"
-          className="buttonsheader"
-          id="burger"
-        />
-      </form>
-    </div>
-  );
+        </header>
+    )
 }
-export default Header;
+export default Header

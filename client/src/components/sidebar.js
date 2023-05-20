@@ -2,7 +2,6 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
 import FolderIcon from '@mui/icons-material/Folder';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-// import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import ForumIcon from '@mui/icons-material/Forum';
 import ShareIcon from '@mui/icons-material/Share';
@@ -28,7 +27,6 @@ const SideBar = ()=>{
          <AddCircleOutlineIcon/> Create Course
         </p>
         <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}}>
-            {/* <CheckBoxIcon/> Quiz */}
             <CreatQuiz/>
         </p>
         <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}}>
