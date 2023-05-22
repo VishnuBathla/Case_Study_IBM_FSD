@@ -7,7 +7,7 @@ import ForumIcon from '@mui/icons-material/Forum';
 import ShareIcon from '@mui/icons-material/Share';
 import HelpIcon from '@mui/icons-material/Help';
 import { useNavigate } from 'react-router-dom';
-import CreatQuiz from './CreateQuiz';
+import QuizComponent from './quizComponent';
 const SideBar = ()=>{
     const navigate = useNavigate()
 
@@ -27,7 +27,7 @@ const SideBar = ()=>{
          <AddCircleOutlineIcon/> Create Course
         </p>
         <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}}>
-            <CreatQuiz/>
+            <QuizComponent/>
         </p>
         <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}}>
             <EventAvailableIcon/> Time Table
