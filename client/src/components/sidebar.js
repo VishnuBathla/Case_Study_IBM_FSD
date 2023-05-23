@@ -8,10 +8,13 @@ import ShareIcon from '@mui/icons-material/Share';
 import HelpIcon from '@mui/icons-material/Help';
 import { useNavigate } from 'react-router-dom';
 import QuizComponent from './quizComponent';
+import Header from './Header';
 const SideBar = ()=>{
     const navigate = useNavigate()
 
     return (
+        <>
+        <Header/>
         <div style={{display:'flex',width:'20%',alignContent:'left',flexDirection:'column'}}>
         <p style={{alignContent:'center',textAlign:'left',margin:"1% 0",cursor:'pointer'}} onClick={()=>{navigate('/profile')}}>
             <AccountCircleIcon/> Teacher Profile
@@ -45,6 +48,7 @@ const SideBar = ()=>{
             <HelpIcon/> Help
         </p>
         </div>
+        </>
     )
 }
 export default SideBar

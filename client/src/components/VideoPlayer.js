@@ -5,7 +5,7 @@ import Header from './Header';
 const VideoPlayer = () => {
   const videoUrl = "https://www.youtube.com/watch?v=yn6vFCRkC3c&ab_channel=WebDevSimplified";
   const watermarkText = "Watermark";
-  const thumbnail = "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQi0PXm1cJpbCDdhphTRS6kPdGeK8Y9sii0xPBktpr7_8GKLh2E_sv81dbx8SJEayIpZvNz2gspP6A33oE";
+  const thumbnail = "https://www.freecodecamp.org/news/content/images/2022/03/photo-1619410283995-43d9134e7656.jpeg";
 
   return (
     <>
@@ -24,7 +24,7 @@ const VideoPlayer = () => {
             top: '80%',
             left: '84%',
             transform: 'translate(-50%, -50%)',
-            backgroundColor: 'black',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
             color: 'white',
             padding: '10px',
             fontSize: '16px',
