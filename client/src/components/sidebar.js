@@ -8,13 +8,12 @@ import ShareIcon from '@mui/icons-material/Share';
 import HelpIcon from '@mui/icons-material/Help';
 import { useNavigate } from 'react-router-dom';
 import QuizComponent from './quizComponent';
-import Header from './Header';
-const SideBar = ()=>{
+import Upload from './upload';
+const SideBar = ({comp_load})=>{
     const navigate = useNavigate()
 
     return (
         <>
-        <Header/>
         <div style={{display:'flex',width:'20%',alignContent:'left',flexDirection:'column'}}>
         <p style={{alignContent:'center',textAlign:'left',margin:"1% 0",cursor:'pointer'}} onClick={()=>{navigate('/profile')}}>
             <AccountCircleIcon/> Teacher Profile
@@ -26,7 +25,7 @@ const SideBar = ()=>{
         <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}}>
             <FolderIcon/> My Courses
         </p>
-        <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}} onClick={()=>navigate("/"+"upload")}>
+        <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}} onClick={()=>comp_load(<Upload/>)}>
          <AddCircleOutlineIcon/> Create Course
         </p>
         <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}}>

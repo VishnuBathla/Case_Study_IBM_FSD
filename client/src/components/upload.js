@@ -1,9 +1,9 @@
 import React, { createRef } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Upload = () => {
   const ref = createRef()
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const darkTheme = {
     backgroundColor: "#333",
     color: "#fff",
@@ -14,7 +14,7 @@ const Upload = () => {
     color: "#333",
   };
   const handler = ()=>{
-    navigate("/"+ref.current.value)
+    // navigate("/"+ref.current.value)
   }
   const styles={
     style:{
@@ -34,6 +34,7 @@ const Upload = () => {
     <>
       <div
         style={{
+          width:'80%',
           textAlign: "center",
           marginTop: "50px",
           fontFamily: "Arial, sans-serif",
@@ -50,11 +51,8 @@ const Upload = () => {
           Create Course
         </h1>
         <div
-          style={{
-            display: "inline-block",
-            position: "relative",
-          }}
         >
+          <label style={{fontSize:'1.6rem',fontWeight:'bolder',paddingBottom:'1%',margin:'0',display:'block'}}>Course Category</label>
           <select
           ref ={ref}
             className="btn btn-secondary dropdown-toggle"
