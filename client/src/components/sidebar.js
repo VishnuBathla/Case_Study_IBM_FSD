@@ -26,7 +26,7 @@ const SideBar = ()=>{
         <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}}>
             <FolderIcon/> My Courses
         </p>
-        <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}}>
+        <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}} onClick={()=>navigate("/"+"upload")}>
          <AddCircleOutlineIcon/> Create Course
         </p>
         <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}}>

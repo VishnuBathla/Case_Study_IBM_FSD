@@ -1,6 +1,9 @@
-import React from "react";
+import React, { createRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Upload = () => {
+  const ref = createRef()
+  const navigate = useNavigate()
   const darkTheme = {
     backgroundColor: "#333",
     color: "#fff",
@@ -10,6 +13,22 @@ const Upload = () => {
     backgroundColor: "#f2f2f2",
     color: "#333",
   };
+  const handler = ()=>{
+    navigate("/"+ref.current.value)
+  }
+  const styles={
+    style:{
+      position: "absolute",
+      top: "100%",
+      left: "50%",
+      transform: "translateX(-50%)",
+      minWidth: "200px",
+      padding: "10px",
+      borderRadius: "5px",
+      boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+      ...(lightTheme || {}),
+    }
+  }
 
   return (
     <>
@@ -36,7 +55,8 @@ const Upload = () => {
             position: "relative",
           }}
         >
-          <button
+          <select
+          ref ={ref}
             className="btn btn-secondary dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
@@ -48,64 +68,40 @@ const Upload = () => {
               cursor: "pointer",
               ...(darkTheme || {}),
             }}
+            onClick={handler}
           >
-            Select Category
-          </button>
-          <ul
-            className="dropdown-menu"
-            style={{
-              position: "absolute",
-              top: "100%",
-              left: "50%",
-              transform: "translateX(-50%)",
-              minWidth: "200px",
-              padding: "10px",
-              borderRadius: "5px",
-              boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
-              ...(lightTheme || {}),
-            }}
-          >
-            <li>
-              <a
+          <option value="upload" style={{...styles.style,color: "#333" }}>  Select Category</option>
+            <option
                 className="dropdown-item"
-                href="aeronautical"
-                style={{ color: "#333" }}
+                value="aeronautical"
+                style={{...styles.style, color: "#333" }}
               >
                 Aeronautical Engineering
-              </a>
-            </li>
-            <li>
-              <a
+            </option>
+            <option
                 className="dropdown-item"
-                href="artificial"
-                style={{ color: "#333" }}
+                value="artificial"
+                style={{ ...styles.style,color: "#333" }}
               >
                 Artificial Intelligence
-              </a>
-            </li>
-            <li>
-              <a
+            </option>
+            <option
                 className="dropdown-item"
-                href="mechanical"
-                style={{ color: "#333" }}
-              >
+                value="mechanical"
+                style={{...styles.style, color: "#333" }}>
                 Mechanical Engineering
-              </a>
-            </li>
-            <li>
-              <a
-                className="dropdown-item"
-                href="industrial"
-                style={{ color: "#333" }}
-              >
+            </option>
+            <option className="dropdown-item"
+                value="industrial"
+                style={{...styles.style, color: "#333" }}>
                 Industrial
-              </a>
-            </li>
-          </ul>
+            </option>
+          </select>
         </div>
       </div>
     </>
   );
 };
+
 
 export default Upload;

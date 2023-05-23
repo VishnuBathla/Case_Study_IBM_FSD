@@ -31,7 +31,6 @@ const App = () => {
         <Route path="/main" element={<SideBar/>} />
         <Route path="/test" element={<VideoPlayer/>} />
         <Route exact path="/upload" Component={Upload}/>
-        <Route path='/' element={Profile}></Route>
         <Route exact path="/aeronautical" Component={Aeronautical}/>
         <Route exact path="/artificial" Component={Artificial}/>
         <Route exact path="/industrial" Component={Industrial}/>
