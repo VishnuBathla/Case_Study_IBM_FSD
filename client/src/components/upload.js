@@ -1,8 +1,9 @@
 import React, { createRef } from "react";
 // import { useNavigate } from "react-router-dom";
-
+import Mechanical from "./mechanical";
 const Upload = () => {
   const ref = createRef()
+  const courses = ["Select Category","Aeronautical Engineering","Artificial Intelligence","Mechanical Engineering","Industrial"]
   // const navigate = useNavigate()
   const darkTheme = {
     backgroundColor: "#333",
@@ -68,33 +69,10 @@ const Upload = () => {
             }}
             onClick={handler}
           >
-          <option value="upload" style={{...styles.style,color: "#333" }}>  Select Category</option>
-            <option
-                className="dropdown-item"
-                value="aeronautical"
-                style={{...styles.style, color: "#333" }}
-              >
-                Aeronautical Engineering
-            </option>
-            <option
-                className="dropdown-item"
-                value="artificial"
-                style={{ ...styles.style,color: "#333" }}
-              >
-                Artificial Intelligence
-            </option>
-            <option
-                className="dropdown-item"
-                value="mechanical"
-                style={{...styles.style, color: "#333" }}>
-                Mechanical Engineering
-            </option>
-            <option className="dropdown-item"
-                value="industrial"
-                style={{...styles.style, color: "#333" }}>
-                Industrial
-            </option>
+          {courses.map(course=>
+          <option className="dropdown-item" style={{...styles.style,color: "#333" }}>  {course}</option>)}
           </select>
+          <Mechanical/>
         </div>
       </div>
     </>

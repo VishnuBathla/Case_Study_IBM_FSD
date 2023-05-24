@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Modal from 'react-modal';
+// import Modal from 'react-modal';
+import { Modal } from 'antd';
 
 function Next() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -19,10 +20,10 @@ function Next() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh',
         backgroundColor: '#f9f9f9',
       }}
     >
+      <Modal open={!modalOpen}>
       <div
         style={{
           maxWidth: '500px',
@@ -103,7 +104,8 @@ function Next() {
 
         {/* Modal */}
         <Modal
-          isOpen={modalOpen}
+        open={modalOpen}
+          // isOpen={modalOpen}
           onRequestClose={closeModal}
           style={{
             overlay: {
@@ -128,6 +130,7 @@ function Next() {
           </button>
         </Modal>
       </div>
+      </Modal>
     </div>
   );
 }

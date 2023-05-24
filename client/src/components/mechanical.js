@@ -1,7 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
+import Next from './next';
 
-function mechanical() {
+function Mechanical() {
+  const [load,loader]=useState(false)
   return (
     <div>
       <div
@@ -9,16 +11,13 @@ function mechanical() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '100vh',
         }}
       >
         <div
           style={{
             textAlign: 'center',
-            backgroundColor: '#f2f2f2',
             padding: '20px',
             borderRadius: '10px',
-            boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
           }}
         >
           <span
@@ -42,8 +41,8 @@ function mechanical() {
             }}
           />
           <br />
-          <Link to="/next">
-            <button
+          {/* <Link to="/next"> */}
+            <button onClick={()=>loader(true)}
               style={{
                 padding: '10px 20px',
                 backgroundColor: '#6c63ff',
@@ -55,11 +54,12 @@ function mechanical() {
             >
               Upload Course
             </button>
-          </Link>
+          {/* </Link> */}
+          {load && <Next/>}
         </div>
       </div>
     </div>
   );
 }
 
-export default mechanical;
+export default Mechanical;
