@@ -2,6 +2,7 @@ import React from "react";
 import './styles/landingPage.css'
 import { Link } from "react-router-dom";
 function LandingPage (){
+  // const date = new Date()
   return (
     <div className="LandingPage">
       <div class="header">
