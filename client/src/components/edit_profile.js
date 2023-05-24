@@ -2,7 +2,7 @@ import { Modal } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import React, { useState } from 'react';
 
-function Edit_Profile({ modal, setModal,setCurrent,current }) {
+function Edit_Profile({ modal, setModal, setCurrent, current }) {
   const [name, setName] = useState(current.name);
   const [expertise, setExpertise] = useState(current.expertise);
   const [phone, setPhone] = useState(current.phone);
@@ -65,13 +65,13 @@ function Edit_Profile({ modal, setModal,setCurrent,current }) {
     const isValid = validateForm();
     if (isValid) {
       setCurrent({
-        "name":name,
-        "expertise":expertise,
-        "phone":phone,
-        "email":email,
-        "description": bio,
-        "imgUrl":imageUrl
-      })
+        name: name,
+        expertise: expertise,
+        phone: phone,
+        email: email,
+        description: bio,
+        imgUrl: imageUrl
+      });
       setName('');
       setExpertise('');
       setPhone('');
@@ -98,39 +98,41 @@ function Edit_Profile({ modal, setModal,setCurrent,current }) {
     <div>
       <div>
         {modal && (
-          <Modal open footer={null} onCancel={handleModalClose}>
-            <span>Name</span>
-            <input type="text" id="Name" value={name} onChange={handleInputChange} />
-            {errors.name && <span>{errors.name}</span>}
-            <br />
-            <br />
-            <span>Expertise</span>
-            <input type="text" id="Designation" value={expertise} onChange={handleInputChange} />
-            {errors.expertise && <span>{errors.expertise}</span>}
-            <br />
-            <br />
-            <span>Phone no.</span>
-            <input type="text" id="Phone no." value={phone} onChange={handleInputChange} />
-            {errors.phone && <span>{errors.phone}</span>}
-            <br />
-            <br />
-            <span>Email</span>
-            <input type="text" id="Email" value={email} onChange={handleInputChange} />
-            {errors.email && <span>{errors.email}</span>}
-            <br />
-            <br />
-            <span>Bio</span>
-            <TextArea id="Bio" value={bio} onChange={handleInputChange} />
-            {errors.bio && <span>{errors.bio}</span>}
-            <br />
-            <br />
-            <span>Image Url</span>
-            <input type="text" id="Image Url" value={imageUrl} onChange={handleInputChange} />
-            {errors.imageUrl && <span>{errors.imageUrl}</span>}
-            <br />
-            <br />
-            <div>
-              <button onClick={handleSubmit}>Submit</button>
+          <Modal visible={modal} footer={null} onCancel={handleModalClose} centered>
+            <div style={{ backgroundColor: '#f8f8f8', padding: '2rem', borderRadius: '8px' }}>
+              <div style={{ marginBottom: '1rem' }}>
+                <span style={{ fontWeight: 'bold', marginRight: '0.5rem' }}>Name:</span>
+                <input type="text" id="Name" value={name} onChange={handleInputChange} style={{ padding: '0.5rem', borderRadius: '4px', border: '1px solid #ccc', width: '100%' }} />
+                {errors.name && <span style={{ color: 'red' }}>{errors.name}</span>}
+              </div>
+              <div style={{ marginBottom: '1rem' }}>
+                <span style={{ fontWeight: 'bold', marginRight: '0.5rem' }}>Expertise:</span>
+                <input type="text" id="Designation" value={expertise} onChange={handleInputChange} style={{ padding: '0.5rem', borderRadius: '4px', border: '1px solid #ccc', width: '100%' }} />
+                {errors.expertise && <span style={{ color: 'red' }}>{errors.expertise}</span>}
+              </div>
+              <div style={{ marginBottom: '1rem' }}>
+                <span style={{ fontWeight: 'bold', marginRight: '0.5rem' }}>Phone no.:</span>
+                <input type="text" id="Phone no." value={phone} onChange={handleInputChange} style={{ padding: '0.5rem', borderRadius: '4px', border: '1px solid #ccc', width: '100%' }} />
+                {errors.phone && <span style={{ color: 'red' }}>{errors.phone}</span>}
+              </div>
+              <div style={{ marginBottom: '1rem' }}>
+                <span style={{ fontWeight: 'bold', marginRight: '0.5rem' }}>Email:</span>
+                <input type="text" id="Email" value={email} onChange={handleInputChange} style={{ padding: '0.5rem', borderRadius: '4px', border: '1px solid #ccc', width: '100%' }} />
+                {errors.email && <span style={{ color: 'red' }}>{errors.email}</span>}
+              </div>
+              <div style={{ marginBottom: '1rem' }}>
+                <span style={{ fontWeight: 'bold', marginRight: '0.5rem' }}>Bio:</span>
+                <TextArea id="Bio" value={bio} onChange={handleInputChange} style={{ padding: '0.5rem', borderRadius: '4px', border: '1px solid #ccc', width: '100%' }} />
+                {errors.bio && <span style={{ color: 'red' }}>{errors.bio}</span>}
+              </div>
+              <div style={{ marginBottom: '1rem' }}>
+                <span style={{ fontWeight: 'bold', marginRight: '0.5rem' }}>Image Url:</span>
+                <input type="text" id="Image Url" value={imageUrl} onChange={handleInputChange} style={{ padding: '0.5rem', borderRadius: '4px', border: '1px solid #ccc', width: '100%' }} />
+                {errors.imageUrl && <span style={{ color: 'red' }}>{errors.imageUrl}</span>}
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <button onClick={handleSubmit} style={{ padding: '0.5rem 1rem', borderRadius: '4px', border: 'none', backgroundColor: '#333', color: '#fff', cursor: 'pointer' }}>Submit</button>
+              </div>
             </div>
           </Modal>
         )}
