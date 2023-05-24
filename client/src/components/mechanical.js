@@ -29,7 +29,7 @@ function Mechanical() {
           >
             Course Description
           </span>
-          <input
+          <textarea
             type="text"
             id="Course Description"
             style={{
@@ -55,7 +55,7 @@ function Mechanical() {
               Upload Course
             </button>
           {/* </Link> */}
-          {load && <Next/>}
+          {load && <Next setModalOpen={loader}/>}
         </div>
       </div>
     </div>

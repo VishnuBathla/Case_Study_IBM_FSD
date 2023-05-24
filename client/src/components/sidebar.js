@@ -19,9 +19,6 @@ const SideBar = ({comp_load})=>{
             <AccountCircleIcon/> Teacher Profile
         </p>
         <hr style={{margin:"1% 0"}}/>
-        <p style={{alignContent:'left' ,textAlign:'left',margin:"1% 0",cursor:'pointer'}}>
-            <DashboardCustomizeIcon/> Dashboard Customize
-        </p>
         <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}}>
             <FolderIcon/> My Courses
         </p>
@@ -30,9 +27,6 @@ const SideBar = ({comp_load})=>{
         </p>
         <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}}>
             <QuizComponent/>
-        </p>
-        <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}}>
-            <EventAvailableIcon/> Time Table
         </p>
         <p style={{alignContent:'left',textAlign:'left',margin:"1% 0",cursor:'pointer'}}>
             <ForumIcon/> Discussion Forum
