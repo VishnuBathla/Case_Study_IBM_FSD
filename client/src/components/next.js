@@ -36,58 +36,28 @@ function Next() {
       >
         <h2 style={{ textAlign: 'center', marginBottom: '30px', color: '#333' }}>Form</h2>
         <div style={{ marginBottom: '20px' }}>
-          <label htmlFor="prefix" style={{ color: 'grey', display: 'block' }}>
-            Prefix:
+          <label htmlFor="title" style={{ color: 'grey', display: 'block' }}>
+            Title:
           </label>
-          <input type="text" id="prefix" style={{ marginLeft: '10px' }} />
+          <input type="text" id="title" style={{ marginLeft: '10px' }} />
         </div>
         <div style={{ marginBottom: '20px' }}>
-          <label htmlFor="firstName" style={{ color: 'grey', display: 'block' }}>
-            First Name:
+          <label htmlFor="headline" style={{ color: 'grey', display: 'block' }}>
+            Headline:
           </label>
-          <input type="text" id="firstName" style={{ marginLeft: '10px' }} />
+          <input type="text" id="headline" style={{ marginLeft: '10px' }} />
         </div>
         <div style={{ marginBottom: '20px' }}>
-          <label htmlFor="middleName" style={{ color: 'grey', display: 'block' }}>
-            Middle Name:
+          <label htmlFor="VideoCount" style={{ color: 'grey', display: 'block' }}>
+            No of Videos:
           </label>
-          <input type="text" id="middleName" style={{ marginLeft: '10px' }} />
+          <input type="number" id="VideoCount" min={0} style={{ marginLeft: '10px' }} />
         </div>
-        <div style={{ marginBottom: '20px' }}>
-          <label htmlFor="lastName" style={{ color: 'grey', display: 'block' }}>
-            Last Name:
-          </label>
-          <input type="text" id="lastName" style={{ marginLeft: '10px' }} />
-        </div>
-        <div style={{ marginBottom: '20px' }}>
-          <label htmlFor="designation" style={{ color: 'grey', display: 'block' }}>
-            Designation:
-          </label>
-          <input type="text" id="designation" style={{ marginLeft: '10px' }} />
-        </div>
-        <div style={{ marginBottom: '20px' }}>
-          <label htmlFor="phoneNo" style={{ color: 'grey', display: 'block' }}>
-            Phone No:
-          </label>
-          <input type="text" id="phoneNo" style={{ marginLeft: '10px' }} />
-        </div>
-        <div style={{ marginBottom: '20px' }}>
-          <label htmlFor="email" style={{ color: 'grey', display: 'block' }}>
-            Email:
-          </label>
-          <input type="text" id="email" style={{ marginLeft: '10px' }} />
-        </div>
-        <div style={{ marginBottom: '20px' }}>
-          <label htmlFor="bio" style={{ color: 'grey', display: 'block' }}>
-            Bio:
-          </label>
-          <input type="text" id="bio" style={{ marginLeft: '10px' }} />
-        </div>
-
+        
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <Link to="/image">
             <button style={{ padding: '10px 20px', borderRadius: '4px', background: '#333', color: '#fff', border: 'none', cursor: 'pointer' }}>
-              Image Upload
+              Course Thumbnail
             </button>
           </Link>
           <Link to="/video">
