@@ -18,6 +18,7 @@ import Next from './components/next'
 import Image from './components/image'
 import Video from './components/video'
 import Edit_Profile from "./components/edit_profile";
+import DiscussionForm from './components/DiscussionForm';
 
 // import QuizComponent from "./components/quizComponent";
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/test" element={<VideoPlayer/>} />
         <Route exact path="/upload" Component={Upload}/>
         <Route exact path="/tester" Component={Edit_Profile}/>
+        <Route path="/discussion" element={<DiscussionForm />} />
         {/* <Route exact path="/aeronautical" Component={Aeronautical}/> */}
         {/* <Route exact path="/artificial" Component={Artificial}/> */}
         {/* <Route exact path="/industrial" Component={Industrial}/> */}
