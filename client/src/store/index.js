@@ -1,6 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import housereducer from "./houses";
-import credentialreducer from "./credential";
+import instructorReducer from './Instructor'
 export const store = configureStore({
-    reducer:{houses: housereducer,credential: credentialreducer}
+    reducer:{instructor: instructorReducer}
 })

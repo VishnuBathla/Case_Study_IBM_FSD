@@ -8,7 +8,7 @@ function Edit_Profile({ modal, setModal, setCurrent, current }) {
   const [phone, setPhone] = useState(current.phone);
   const [email, setEmail] = useState(current.email);
   const [bio, setBio] = useState(current.description);
-  const [imageUrl, setImageUrl] = useState(current.imgUrl);
+  const [imageUrl, setImageUrl] = useState(current.imageUrl);
   const [errors, setErrors] = useState({});
 
   const handleInputChange = (e) => {
@@ -70,7 +70,7 @@ function Edit_Profile({ modal, setModal, setCurrent, current }) {
         phone: phone,
         email: email,
         description: bio,
-        imgUrl: imageUrl
+        imageUrl: imageUrl
       });
       setName('');
       setExpertise('');

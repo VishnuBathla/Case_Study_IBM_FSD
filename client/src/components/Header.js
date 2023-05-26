@@ -6,7 +6,7 @@ const Header = ()=>{
         <header style={{display:'grid', height:'8vh',background:'black',color:'white'}}>
             <Link to={'/main'} style={{fontSize:'1.5rem',textAlign:'left',gridColumn:1,marginTop:'auto',color:'white',fontWeight:'bolder',textDecoration:'none'}} >LearnIt</Link>
             <span style={{display:'flex',justifyContent:'end',gridColumn:2,marginTop:'auto'}}>
-            <span style={{marginRight:'2%'}} >Library</span>
+            <Link to={'/courses'} style={{marginRight:'2%',textDecoration:'none',color:'white'}} >Library</Link>
             <span style={{marginRight:'2%',gridColumn:1}}>My Course</span>
             <SearchIcon style={{color:'white',marginRight:'2%',gridColumn:1}}/> 
             <NotificationsIcon style={{color:'white',gridColumn:1}} />

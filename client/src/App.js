@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SignupPage from "./components/student/signUpPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CourseDetails from "./components/CourseDetails";
@@ -13,7 +13,14 @@ import Next from './components/next'
 import Image from './components/image'
 import Video from './components/video'
 import SingleCourse from "./components/SingleCourse";
+import {useDispatch} from 'react-redux'
+import {fetchCurrentUser} from './store/Instructor'
 const App = () => {
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(fetchCurrentUser())
+
+  })
   return (
     <Router>
       <Routes>
