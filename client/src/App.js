@@ -6,21 +6,13 @@ import LandingPage from "./components/landingPage";
 import SignInPage from "./components/student/signInPage";
 import Profile from "./components/instructor_profile";
 import CourseCatalog from "./components/course_catalog";
-// import SideBar from "./components/sidebar";
 import Main from "./components/main"
 import VideoPlayer from "./components/VideoPlayer";
 import Upload from './components/upload';
-// import Aeronautical from './components/aeronautical';
-// import Mechanical from './components/mechanical'
-// import Artificial from './components/artificial'
-// import Industrial from './components/industrial'
 import Next from './components/next'
 import Image from './components/image'
 import Video from './components/video'
-import Edit_Profile from "./components/edit_profile";
-// import DiscussionForm from './components/DiscussionForm';
-
-// import QuizComponent from "./components/quizComponent";
+import SingleCourse from "./components/SingleCourse";
 const App = () => {
   return (
     <Router>
@@ -34,8 +26,8 @@ const App = () => {
         <Route path="/main" element={<Main/>} />
         <Route path="/test" element={<VideoPlayer/>} />
         <Route exact path="/upload" Component={Upload}/>
-        <Route exact path="/tester" Component={Edit_Profile}/>
-        {/* <Route path="/discussion" element={<DiscussionForm />} /> */}
+        {/* <Route exact path="/tester" Component={Edit_Profile}/> */}
+        <Route path="/tester" element={<SingleCourse />} />
         {/* <Route exact path="/aeronautical" Component={Aeronautical}/> */}
         {/* <Route exact path="/artificial" Component={Artificial}/> */}
         {/* <Route exact path="/industrial" Component={Industrial}/> */}
