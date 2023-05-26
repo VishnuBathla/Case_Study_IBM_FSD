@@ -11,11 +11,6 @@ function Next({ setModalOpen }) {
     thumbnail: '',
     videos: []
   });
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
   return (
     <div
       style={{
@@ -25,25 +20,10 @@ function Next({ setModalOpen }) {
         backgroundColor: '#f9f9f9',
       }}
     >
-      <Modal visible={true} footer={null} centered>
+      <Modal open footer={null} centered>
         <div style={{ backgroundColor: '#f8f8f8', padding: '2rem', borderRadius: '8px' }}>
           <h2 style={{ textAlign: 'center', fontWeight: 'bold' }}>Course Details</h2>
-          <First setter={setCourse} />
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-            <button
-              onClick={closeModal}
-              style={{
-                padding: '0.5rem 1rem',
-                borderRadius: '4px',
-                background: '#333',
-                color: '#fff',
-                border: 'none',
-                cursor: 'pointer',
-              }}
-            >
-              Submit
-            </button>
-          </div>
+          <First setter={setCourse} setModalOpen={setModalOpen} />
         </div>
       </Modal>
     </div>

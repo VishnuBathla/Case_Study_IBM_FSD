@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 const DiscussionForm = () => {
   const [title, setTitle] = useState('');
   const [posts, setPosts] = useState([]);
-  const [comment, setComment] = useState('');
-  const [activePostId, setActivePostId] = useState(null);
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
@@ -22,26 +20,9 @@ const DiscussionForm = () => {
     }
   };
 
-  const handleCommentChange = (e) => {
-    setComment(e.target.value);
-  };
 
-  const handleCommentClick = (postId) => {
-    if (comment.trim() !== '') {
-      const updatedPosts = posts.map((post) => {
-        if (post.id === postId) {
-          return {
-            ...post,
-            comments: [...post.comments, comment.trim()],
-          };
-        }
-        return post;
-      });
-      setPosts(updatedPosts);
-      setComment('');
-      setActivePostId(null);
-    }
-  };
+
+
 
   return (
     <div style={styles.container}>
@@ -66,29 +47,7 @@ const DiscussionForm = () => {
                 <li key={index}>{comment}</li>
               ))}
             </ul>
-            {activePostId === post.id ? (
-              <div>
-                <textarea
-                  style={styles.commentInput}
-                  placeholder="Enter your comment"
-                  value={comment}
-                  onChange={handleCommentChange}
-                />
-                <button
-                  style={styles.commentButton}
-                  onClick={() => handleCommentClick(post.id)}
-                >
-                  Comment
-                </button>
-              </div>
-            ) : (
-              <button
-                style={styles.commentButton}
-                onClick={() => setActivePostId(post.id)}
-              >
-                Comment
-              </button>
-            )}
+            
           </div>
         ))}
       </div>

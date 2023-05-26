@@ -69,8 +69,8 @@ const Upload = () => {
             }}
             onClick={handler}
           >
-          {courses.map(course=>
-          <option className="dropdown-item" style={{...styles.style,color: "#333" }}>  {course}</option>)}
+          {courses.map((course,id)=>
+          <option key={id} className="dropdown-item" style={{...styles.style,color: "#333" }}>  {course}</option>)}
           </select>
           <Mechanical/>
         </div>

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-const VideoElement = ({ cur_video, number, navigate, isLast, changeData, finish }) => {
+const VideoElement = ({ cur_video, number, navigate, isLast, changeData, finish}) => {
   const [title, setTitle] = useState('');
   const [thumbnail, setThumbnail] = useState('');
   const [videoLink, setVideoLink] = useState('');
   const [description, setDescription] = useState('');
   const [errors, setErrors] = useState({});
-
   useEffect(() => {
     setTitle(cur_video.title);
     setThumbnail(cur_video.thumbnail);

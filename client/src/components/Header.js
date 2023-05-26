@@ -4,7 +4,7 @@ import { Link} from 'react-router-dom';
 const Header = ()=>{
     return (
         <header style={{display:'grid', height:'8vh',background:'black',color:'white'}}>
-            <Link to={'/'} style={{fontSize:'1.5rem',textAlign:'left',gridColumn:1,marginTop:'auto',color:'white',fontWeight:'bolder',textDecoration:'none'}} >LearnIt</Link>
+            <Link to={'/main'} style={{fontSize:'1.5rem',textAlign:'left',gridColumn:1,marginTop:'auto',color:'white',fontWeight:'bolder',textDecoration:'none'}} >LearnIt</Link>
             <span style={{display:'flex',justifyContent:'end',gridColumn:2,marginTop:'auto'}}>
             <span style={{marginRight:'2%'}} >Library</span>
             <span style={{marginRight:'2%',gridColumn:1}}>My Course</span>
