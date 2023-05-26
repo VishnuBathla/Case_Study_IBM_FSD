@@ -39,7 +39,7 @@ class QuizDetails extends React.Component {
 
       return (
         <Modal
-          visible={visible}
+          open={visible}
           title="New Quiz"
           okText="Save"
           cancelText="Cancel"
